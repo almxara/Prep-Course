@@ -3,18 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  return array[0]
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array[array.length - 1]
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  return array.length
 }
 
 
@@ -23,6 +26,12 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  
+
+  for (let i = 0; i < array.length ; i++) {
+    array[i] = array[i] + 1
+  }  
+  return array
 }
 
 
@@ -30,6 +39,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
@@ -38,6 +49,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -47,6 +60,10 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+
+  var frase = palabras.join (" ");
+  return frase;
+
 }
 
 
@@ -54,13 +71,18 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.includes(elemento)
 }
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
-  // Tu código:
+  // Tu código:  
+  sumaDeNumeros = 0
+  for (let i = 0; i < numeros.length; i++) {
+    sumaDeNumeros = sumaDeNumeros + numeros[i]
+  } return sumaDeNumeros
 }
 
 
@@ -68,6 +90,10 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  promedioDePuntajes = 0
+  for (let i = 0; i < resultadosTest.length; i++) {
+    promedioDePuntajes = (promedioDePuntajes + resultadosTest[i])
+  } return (promedioDePuntajes/resultadosTest.length)
 }
 
 
@@ -75,6 +101,11 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
+  for (let i = 0; i < array.length; i++) {
+    
+    
+  }
 }
 
 
@@ -89,6 +120,13 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+  var mayor18 = 0
+
+  for (let i = 0; i < arreglo.length; i++) {
+    if (i > 18) {
+      mayor18 = mayor18 + arreglo[i]
+    }
+  } return mayor18.length 
 }
 
 
@@ -105,7 +143,10 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+ 
+  if (n.length[0] === 9) {
+    return true
+  } return false 
 }
 
 
